@@ -1,0 +1,19 @@
+{
+    "name": "matecito/boilerplate-theme",
+    "description": "Boiler Theme for WordPress Projects",
+    "autoload": {
+        "psr-4": {
+            "BoilerplateTheme\\Functions\\": "src/",
+            "BoilerplateTheme\\Options\\": "src/options/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Juan Iriart",
+            "email": "jeiriart@gmail.com"
+        }
+    ],
+    "require": {
+        "htmlburger/carbon-fields": "^3.3"
+    }
+}
