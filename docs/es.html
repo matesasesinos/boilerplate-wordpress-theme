@@ -29,6 +29,7 @@
                 <h3>Indice</h3>
                 <br>
                 <p><a href="#descripcion">Descripción del Theme</a></p>
+                <p><a href="#convencion">Conveción de nombres</a></p>
             </div>
             <div class="col-9 offset-3">
 
@@ -39,6 +40,56 @@
                     También se utiliza Webpack y Babel para compilar y minificar JS y CSS.<br />
                     Para crear opciones, metaboxes y bloques gutenberg simples, se utiliza <a
                         href="https://docs.carbonfields.net/#/quickstart" target="_blank">Carbon Fields</a>.
+                </p>
+                <hr>
+                <p id="convencion">
+                    <strong>Convención de nombres</strong>
+                </p>
+                <p>
+                    Para una mejor organización proponemos la siguiente convención para <strong>PHP /
+                        WordPress</strong>.
+                </p>
+                <p>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Clases</th>
+                            <th>Métodos</th>
+                            <th>Propiedades</th>
+                            <th>Funciones</th>
+                            <th>Variables</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>PascalCase</td>
+                            <td>camelCase</td>
+                            <td>camelCase</td>
+                            <td>lower_case / snake_case</td>
+                            <td>lower_case / snake_case</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br />
+                <strong>Ejemplo</strong>
+                <pre>
+                        <code>
+                            class NombreClass
+                            {
+                                public $propiedadUno = 'valor';
+
+                                public function unMetodo($variable)
+                                {
+                                    return $variable;
+                                }
+                            }
+                            / --- /
+                            function una_funcion($una_variable)
+                            {
+                                return $una_variable;
+                            }
+                        </code>
+                    </pre>
                 </p>
             </div>
         </div>
