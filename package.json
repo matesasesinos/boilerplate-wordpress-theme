@@ -12,8 +12,8 @@
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.6",
     "babel-loader": "^8.2.2",
-    "babel-preset-env": "^1.7.0",
     "css-loader": "^6.3.0",
     "mini-css-extract-plugin": "^2.3.0",
     "optimize-css-assets-webpack-plugin": "^6.0.1",

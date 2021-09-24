@@ -4,19 +4,16 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 module.exports = {
     mode: "production",
-    entry: ['./src/js/src/app.js', './src/css/src/app.scss'],
+    entry: ['./js/src/app.js', './css/src/app.scss'],
     output: {
-        filename: './src/js/build/app.min.js',
+        filename: './js/build/app.min.js',
         path: path.resolve(__dirname)
     },
     module: {
         rules: [
             {
                 test: /\.js$/, exclude: /node_modules/,
-                use: {
-                    loader: "babel-loader", 
-                    options: { presets: ['babel-preset-env'] } 
-                }
+                use: { loader: "babel-loader" }
             },
             {
                 test: /\.(sass|scss)$/,
@@ -24,7 +21,7 @@ module.exports = {
             } 
         ]
     },
-    plugins: [new MiniCssExtractPlugin({ filename: './src/css/build/main.min.css' }) ],
+    plugins: [new MiniCssExtractPlugin({ filename: './css/build/main.min.css' }) ],
     optimization: {
         minimizer: [
             new UglifyJSPlugin({

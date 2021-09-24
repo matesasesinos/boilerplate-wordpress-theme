@@ -1,12 +1,13 @@
 <?php
-require __DIR__.'/vendor/autoload.php';
+require __DIR__ . '/vendor/autoload.php';
 
 use BoilerplateTheme\Options\ThemeOptions;
-use BoilerplateTheme\Functions\ThemeFunctions;
+use BoilerplateTheme\Functions\ThemeScripts;
+use BoilerplateTheme\Functions\ThemeStyles;
 
 class Boilerplate_Init
 {
-    private static $initialized= false;
+    private static $initialized = false;
 
     static public function init()
     {
@@ -15,19 +16,25 @@ class Boilerplate_Init
         self::$initialized = true;
 
         self::constants();
-        self::functions();
+        self::styles();
+        self::scripts();
         self::options();
         self::main_style();
     }
 
     static public function constants()
     {
-        define('BT_VERSION','1.0');
+        define('BT_VERSION', '1.0');
     }
 
-    static public function functions()
+    static public function styles()
     {
-        return new ThemeFunctions();
+        return new ThemeStyles();
+    }
+
+    static public function scripts()
+    {
+        return new ThemeScripts();
     }
 
     static public function options()
@@ -37,7 +44,7 @@ class Boilerplate_Init
 
     static public function main_style()
     {
-        wp_enqueue_style('main-style',get_stylesheet_uri());
+        wp_enqueue_style('main-style', get_stylesheet_uri());
     }
 }
 
